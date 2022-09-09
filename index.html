@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.3/dist/css/uikit.min.css" />
     <link rel="stylesheet" href="./styles/styles.css" />
+    <script src="./index.js"></script>
     <title>Task</title>
 </head>
 
@@ -32,7 +33,7 @@
                     <p class="uk-margin-medium uk-text-light">Download the 2021 Gartner Magic Quadrant for Application Security Testing report to discover why Gartner has named Micro Focus a Magic Quadrant Leader in application security testing—the fastest growing of all tracked information security segments.</p>
                 </div>
 
-                <div class="sticky-container uk-sticky uk-active uk-sticky-below uk-margin-remove-top uk-margin-remove-bottom uk-position-fixed">
+                <div class="sticky-container uk-sticky uk-active uk-sticky-below uk-margin-remove-bottom ">
                     <div class="uk-width-1-1">
                         <div class="box">
                             <div class="box-header">
@@ -46,16 +47,43 @@
 
                             <div class="uk-margin-small-top">
                                 <div class=" uk-flex uk-flex-row uk-text-left">
-                                    <div class="uk-width-1-1">
-                                        <label for="fname">First Name *</label><br>
-                                        <input class="uk-input uk-width-1-1 uk-border-rounded" type="text" id="fname" name="fname"><br>
-                                        <label for="lname">Last Name *</label><br>
-                                        <input class="uk-input uk-width-1-1 uk-border-rounded" type="text" id="lname" name="lname"><br>
-                                        <label for="email">Email *</label><br>
-                                        <input class="uk-input uk-width-1-1 uk-border-rounded" type="text" id="email" name="email"><br>
-                                        <label for="phonenumber">Phone Number *</label><br>
-                                        <input class="uk-input uk-width-1-1 uk-border-rounded" type="number" id="number" name="number"><br>
-                                        <label for="pincode">Pincode *</label><br>
+                                    <div class="uk-width-1-1@m">
+                                        <div>
+                                            <label for="fname">First Name <span class="uk-text-small uk-text-danger">*</span></label><br>
+                                        </div>
+                                        <div>
+                                            <div class="uk-form-controls">
+                                                <input id="fname" type="fname" name="fname" label="fname" tabindex="" onkeyup="validateFname(event)" class="uk-input" required="" >
+                                                <span class=""></span><span id="fname-validation" class="uk-text-small uk-text-danger"></span></div>
+                                        </div>
+                                        <div>
+                                            <label for="lname">Last Name <span class="uk-text-small uk-text-danger">*</span></label><br>
+                                        </div>
+                                        <div>
+                                            <div class="uk-form-controls">
+                                                <input id="lname" type="lname" name="lname" label="lname" tabindex="" onkeyup="validateLname(event)" class="uk-input" required="" >
+                                                <span class=""></span><span id="lname-validation" class="uk-text-small uk-text-danger"></span></div>
+                                        </div>
+                                        <div>
+                                            <label for="email">Email <span class="uk-text-small uk-text-danger">*</span></label><br>
+                                        </div>
+                                        <div>
+                                            <div class="uk-form-controls">
+                                                <input id="email" type="email" name="email" label="email" tabindex="" onkeyup="validateEmail(event)" class="uk-input" required="" >
+                                                <span class=""></span><span id="email-validation" class=" uk-text-small uk-text-danger"></span></div>
+                                        </div>
+                                        
+                                        <div>
+                                            <label for="number">Phone Number <span class="uk-text-small uk-text-danger">*</span></label><br>
+                                        </div>
+                                        <div>
+                                            <div class="uk-form-controls">
+                                                <input id="number" name="number" label="number" tabindex="" onkeyup="validatePhoneNum(event)" class="uk-input" required="" >
+                                                <span class=""></span><span id="phonenum-validation" class="uk-text-small uk-text-danger"></span></div>
+                                        </div>
+                                        
+                                        <div><label for="pincode">Pincode <span class="uk-text-small uk-text-danger">*</span></label><br></div>
+
                                         <input class="uk-input uk-width-1-1 uk-border-rounded" type="number" id="number" name="number"><br>
 
                                         <div class="uk-grid">
@@ -114,7 +142,7 @@
                         warranties, expressed or implied, with respect to this research, including any warranties of
                         merchantability or fitness for a particular purpose. This graphic was published by Gartner, Inc.
                         as part of a larger research document and should be evaluated in the context of the entire
-                        document. The Gartner document is available upon request from Micro Focus. * The Fortify brand
+                        document. The Gartner document is available upon request from Micro Focus. The Fortify brand
                         was recognized as a Magic Quadrant Leader 8 times over the years under HP, HPE and currently
                         under Micro Focus.
                     </p>
