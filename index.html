@@ -79,12 +79,21 @@
                                         <div>
                                             <div class="uk-form-controls">
                                                 <input id="number" name="number" label="number" tabindex="" onkeyup="validatePhoneNum(event)" class="uk-input" required="" >
-                                                <span class=""></span><span id="phonenum-validation" class="uk-text-small uk-text-danger"></span></div>
+                                                <span id="phonenum-validation" class="uk-text-small uk-text-danger"></span>
+                                            </div>
                                         </div>
                                         
-                                        <div><label for="pincode">Pincode <span class="uk-text-small uk-text-danger">*</span></label><br></div>
+                                        <div>
+                                            <label for="pincode">Pincode <span class="uk-text-small uk-text-danger">*</span></label><br>
+                                        </div>
 
-                                        <input class="uk-input uk-width-1-1 uk-border-rounded" type="number" id="number" name="number"><br>
+                                        <div>
+                                            <div class="uk-form-controls">
+                                                <input id="pincode"   tabindex="" onblur="validatePincode(event)" class="uk-input" required="" >
+                                                <span id="pincode-validation" class="uk-text-small uk-text-danger"></span>
+                                            </div>
+                                        </div>
+                                        
 
                                         <div class="uk-grid">
                                             <button type="submit" label="submit" class="button uk-position-relative uk-button uk-button-primary uk-margin-top">Next</button>

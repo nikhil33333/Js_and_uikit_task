@@ -86,15 +86,17 @@ function validatePhoneNum(event){
     }
 }
 
-// function validatePincode(event){
-//     var warningtext = document.getElementById("pincode-validation");
-//     var pincodeInput=document.getElementById("pincode");
-//     if(!pincodes.includes(event.target.value)){
-//         warningtext.innerHTML="Pincode is not matched";
-//         pincodeInput.classList.add("uk-form-danger");
-//     }
-//     else{
-//         warningtext.innerHTML="";
-//         pincodeInput.classList.remove("uk-form-danger");
-//     }
-// }
+function validatePincode(event){
+    var pincodeArr=["110001","110002","110003","110004","110005","110006","110007","110008","110009","110010","110011","110012","110013","110014","110015"];
+    var warningtext = document.getElementById("pincode-validation");
+    var pincodeInput=document.getElementById("pincode");
+    console.log(event.target.value)
+    if(!pincodeArr.includes(event.target.value)){
+        warningtext.innerHTML="Pincode is not matched";
+        pincodeInput.classList.add("uk-form-danger");
+    }
+    else{
+        warningtext.innerHTML="";
+        pincodeInput.classList.remove("uk-form-danger");
+    }
+}
